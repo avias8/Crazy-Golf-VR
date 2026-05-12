@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Tee Time VR</title>
+    <title>Privacy Policy - Crazy Golf VR</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -17,91 +17,182 @@
     <section id="privacy-section">
         <div class="container">
             <div class="privacy-content">
-                <p><strong>Effective Date:</strong> September 23, 2025</p>
+                <p><strong>Effective Date:</strong> May 11, 2026</p>
 
                 <p><strong>Owner &amp; Data Controller</strong><br>
                 Fiskar Varmations (Avi Varma, doing business as &ldquo;Fiskar Varmations&rdquo;)<br>
                 Calgary, AB, Canada<br>
                 Contact: <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a><br>
-                This policy covers: Tee-Time VR for Meta Quest.</p>
+                This policy covers: Crazy Golf VR for Meta Quest.</p>
 
                 <h3>Introduction</h3>
-                <p>"Tee Time VR" is developed and published by Avi Varma, a solo developer doing business as Fiskar Varmations ("we," "us," or "our"). This Privacy Policy explains what
-                information we process when you play Tee Time VR, why we process it, and the choices you have regarding that
-                information. Meta may ask you to review this policy before granting access to certain platform features, such as
-                multiplayer services.</p>
+                <p>Crazy Golf VR (&ldquo;the app,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is developed and published by Avi Varma, a solo developer doing business as Fiskar Varmations. This Privacy Policy explains what information we process when you play Crazy Golf VR, why we process it, the choices you have, and how to contact us about your data. The Meta Horizon platform may ask you to review this policy before granting access to certain features such as multiplayer, voice chat, or party invites.</p>
+
+                <p>This policy applies to all users of Crazy Golf VR. Specific protections that apply to children (users whose Meta account is in the &ldquo;child&rdquo; age group, ages 10&ndash;12) are described in the <a href="#childrens-privacy">Children&rsquo;s Privacy</a> section below.</p>
 
                 <h3>Information We Process</h3>
-                <p>We process only the information that is necessary to operate the game, deliver platform features, and provide
-                support. We do not sell your information or use it for advertising.</p>
+                <p>We process only the information necessary to operate the app, deliver platform features, and provide support. We do not sell your information. We do not use your information to target advertising. The categories of information we process are:</p>
                 <ul>
-                    <li><strong>Meta account information.</strong> When you sign in through the Meta platform, we receive your Meta
-                    (Oculus) user ID, display name, and profile image. We use this information to authenticate you, show your
-                    profile to other players in lobbies and leaderboards, and to enable friend invites and matchmaking provided by
-                    the Meta platform.</li>
-                    <li><strong>Gameplay and progression data.</strong> We store your local player preferences, achievements, and leaderboard scores so the game can save your progress, present rankings, and
-                    prevent cheating. When you participate in multiplayer matches, your shot data and voice-chat participation are
-                    transmitted in real time to the other players in the session.</li>
-                    <li><strong>Support information.</strong> If you contact us at <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a>
-                    we will process the email address, message contents, and any attachments you choose to send so that we can
-                    respond to your request.</li>
+                    <li><strong>Meta account information.</strong> When you sign in through the Meta platform, we receive your Meta (Horizon) user ID, your display name, your profile photo, and your age group (&ldquo;child&rdquo; / &ldquo;teen&rdquo; / &ldquo;adult&rdquo;). We use this to authenticate you, present your identity to other players, and apply age-appropriate feature gates.</li>
+                    <li><strong>Meta Avatar.</strong> We display your Meta Avatar inside the app using the Meta Avatars SDK. We do not store your avatar customization data &mdash; it is fetched from Meta each session and displayed locally and to other players in the same session.</li>
+                    <li><strong>Gameplay and progression data.</strong> We store your local preferences, achievements, and leaderboard scores so the app can save your progress, present rankings, and prevent cheating. During a multiplayer match, your shot data, position, and game actions are transmitted in real time to the other players in the session.</li>
+                    <li><strong>Voice chat (users aged 13 and older only).</strong> If you are 13 or older and you enable voice chat, your microphone audio is transmitted in real time to the other players in your session using Vivox, operated by Unity Technologies. Voice audio is not recorded or stored by us. Vivox retains certain non-content metadata for routing and abuse prevention as described in the <a href="#voice-chat">Voice Chat</a> section.</li>
+                    <li><strong>Text chat (where offered, users aged 13 and older only).</strong> If text chat is available and you use it, message contents are transmitted via Vivox and may be retained by Vivox for up to seven days for safety and abuse-prevention purposes.</li>
+                    <li><strong>Platform social features.</strong> When you use follower discovery, party formation, invites, or deep-link &ldquo;join&rdquo; features, we process the user IDs and display names of the relevant Meta users (you, your followers, the inviter, and party members) only to enable the requested social action.</li>
+                    <li><strong>Blocked users.</strong> We receive your Meta block list so we can honor it inside the app &mdash; blocked users will not appear in your follower list, invite list, or matchmaking results.</li>
+                    <li><strong>Support information.</strong> If you contact us at <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a>, we process your email address, message contents, and any attachments to respond to your request.</li>
+                    <li><strong>Diagnostic information.</strong> We collect anonymous crash reports, performance metrics, and error logs through the Meta platform to identify and fix bugs. These reports do not include your voice, text, or chat contents.</li>
+                </ul>
+
+                <h3>Platform Features and Data Use</h3>
+                <p>Crazy Golf VR integrates with the Meta Horizon Platform SDK for the social and platform features below. For each feature we follow Meta&rsquo;s Developer Data Use Policy and use the data received solely for the purpose stated.</p>
+                <ul>
+                    <li><strong>User ID and User Profile.</strong> We use your Meta user ID and profile (display name + profile photo) to identify you across sessions, display your identity to other players inside the app, and link your progress to your account. We do not use these to identify you across unrelated apps or for advertising.</li>
+                    <li><strong>User Age Group.</strong> We call Meta&rsquo;s Get Age Category API to receive a coarse signal (child / teen / adult) for your Meta account. We use this only to apply age-appropriate feature gates inside the app (see <a href="#childrens-privacy">Children&rsquo;s Privacy</a>). We do not receive your date of birth, and we do not use this signal for any other purpose.</li>
+                    <li><strong>Avatars.</strong> We use the Meta Avatars SDK to display your avatar in the app. Avatar data is fetched from Meta when your session begins and is displayed locally and to other players in the same session. We do not store, repurpose, or transmit avatar data beyond the active session.</li>
+                    <li><strong>Followers (sometimes referred to as &ldquo;Friends&rdquo;).</strong> We use Meta&rsquo;s Followers API to help you find people you follow on Meta who also play Crazy Golf VR, so you can play together. We process the user IDs and display names of your followers only for the duration of the in-app friends list session and do not retain them afterward.</li>
+                    <li><strong>Invites.</strong> When you send or receive an invite to a Crazy Golf VR session, we process the user IDs of the sender and recipient and any optional invite message only to deliver the invite. We do not retain invite metadata after the invite is accepted, declined, or expires.</li>
+                    <li><strong>Parties.</strong> When you join or create a Meta Party that plays Crazy Golf VR together, we process party membership and the user IDs of party members only to provide the party experience &mdash; placing your party in the same room and session. We do not use party data outside that experience.</li>
+                    <li><strong>Blocked Users.</strong> We receive your Meta block list and honor it across the app&rsquo;s social and matchmaking surfaces. We do not use the block list for any other purpose.</li>
+                    <li><strong>Deep Linking (Destinations / Rich Presence).</strong> When a friend invites you to a specific session, we use Meta&rsquo;s deep-link parameters to route you directly to the correct lobby. We process deep-link parameters only at the moment of join.</li>
                 </ul>
 
                 <h3>How We Use Your Information</h3>
                 <p>We use the information described above to:</p>
                 <ul>
-                    <li>Create and maintain multiplayer lobbies, leaderboards, and other social gameplay features;</li>
-                    <li>Synchronize gameplay data across your devices when you use your Meta account;</li>
+                    <li>Authenticate you and link your gameplay progress to your Meta account;</li>
+                    <li>Match you with other players in age-appropriate sessions;</li>
+                    <li>Create and maintain multiplayer lobbies, leaderboards, and party experiences;</li>
+                    <li>Display your avatar, name, and game state to other players in your session;</li>
+                    <li>Apply age-appropriate feature gates (see <a href="#childrens-privacy">Children&rsquo;s Privacy</a>);</li>
                     <li>Provide customer support and respond to your requests;</li>
-                    <li>Monitor performance, detect bugs, and protect the Service against abuse.</li>
+                    <li>Monitor performance, detect bugs, and protect the service against abuse and cheating;</li>
+                    <li>Comply with our legal obligations.</li>
                 </ul>
 
-                <h3>Legal Basis</h3>
-                <p>We process your information because it is necessary to perform the contract with you (the End User License
-                Agreement governing access to Tee Time VR), to provide the platform features you request, and to comply with our
-                legitimate interests in operating a secure and fair game environment. Where required, we rely on your consent—for
-                example, when you opt in to voice chat during a multiplayer session.</p>
+                <p>We do <strong>not</strong>:</p>
+                <ul>
+                    <li>Sell, license, rent, or lend your personal information to anyone;</li>
+                    <li>Use your data for targeted advertising or cross-context behavioral advertising;</li>
+                    <li>Combine your Meta user data with data from outside our app without your explicit consent;</li>
+                    <li>Use your data to profile you for discrimination or surveillance.</li>
+                </ul>
+
+                <h3>Legal Basis (GDPR &amp; Quebec Law 25)</h3>
+                <p>If you are located in the European Economic Area, the United Kingdom, or a jurisdiction with comparable data-protection law (including Quebec, Canada, under Law 25), we process your data on the following lawful bases:</p>
+                <ul>
+                    <li><strong>Performance of the contract</strong> with you (the Terms of Service governing access to Crazy Golf VR) &mdash; for authentication, matchmaking, gameplay, and progress storage;</li>
+                    <li><strong>Your consent</strong> &mdash; for optional features such as voice chat, where you have granted microphone permission;</li>
+                    <li><strong>Legitimate interests</strong> &mdash; for fraud prevention, abuse prevention, security, and bug investigation, balanced against your rights;</li>
+                    <li><strong>Compliance with legal obligations</strong> &mdash; including child-protection laws and lawful information requests.</li>
+                </ul>
+
+                <p><strong>Automated decision-making (Quebec Law 25).</strong> Matchmaking uses automated logic to place you in sessions based on your age group, region, and party membership. This is purely a session-routing function and is not &ldquo;automated decision-making producing legal effects&rdquo; within the meaning of Quebec Law 25 §65.2. If you have questions about how matchmaking decisions affect your account, contact us at the email above.</p>
+
+                <h3 id="voice-chat">Voice Chat</h3>
+                <p>Voice chat is available <strong>only to users aged 13 and older</strong>. If your Meta account is in the &ldquo;child&rdquo; age group (ages 10&ndash;12), voice chat is disabled for you in Crazy Golf VR and we never request microphone permission &mdash; see <a href="#childrens-privacy">Children&rsquo;s Privacy</a>.</p>
+                <p>When you use voice chat:</p>
+                <ul>
+                    <li>Your microphone audio is captured by Crazy Golf VR after you grant microphone permission through your Meta Quest device;</li>
+                    <li>Audio is transmitted in real time through Vivox infrastructure, operated by Unity Technologies, to the other participants of your voice channel;</li>
+                    <li>Voice audio is <strong>ephemeral</strong>. We do not record, store, transcribe, or moderate voice content with AI. Vivox processes voice as a live transmission and does not retain voice payloads on its servers;</li>
+                    <li>Vivox retains certain non-content metadata to operate the service: a truncated IP address, your developer-assigned user ID, and a device identifier, each for up to 30 days, for routing, abuse prevention, and service operations;</li>
+                    <li>You can mute yourself, mute other players, or leave a voice channel at any time using the in-app controls or Meta system controls;</li>
+                    <li>Other players in your session can hear your voice while you are unmuted. As Meta notes in its platform documentation, voice in a shared virtual space can be heard, copied, or recorded by other users. Please be considerate of what you share.</li>
+                </ul>
+                <p>Unity Technologies acts as our data processor under the GDPR and our service provider under the CCPA for Vivox voice services. Unity&rsquo;s data-processing terms are available at <a href="https://unity.com/legal/unity-data-processing-addendum-dpa">unity.com/legal/unity-data-processing-addendum-dpa</a>.</p>
+
+                <h3 id="childrens-privacy">Children&rsquo;s Privacy (Ages 10&ndash;12)</h3>
+                <p>Crazy Golf VR is self-certified as a &ldquo;Mixed Ages&rdquo; experience on the Meta Horizon Store, meaning it is available to users 10 years of age and older. We believe gaming should be a safe place for kids to play and connect. To protect children&rsquo;s privacy while keeping the social experience meaningful, we apply the following protections to users whose Meta age category resolves to &ldquo;child&rdquo; (ages 10&ndash;12):</p>
+                <ul>
+                    <li><strong>Voice chat is disabled.</strong> Child users cannot enable voice chat in Crazy Golf VR, and we never request microphone permission from a child user. Voice audio is never captured.</li>
+                    <li><strong>Segregated matchmaking.</strong> Child users are matchmade only with other child users in their age range. They do not appear in adult matchmaking pools, and adults do not appear in their matchmaking pools.</li>
+                    <li><strong>Non-voice expression.</strong> Child users can express themselves through their Meta Avatar&rsquo;s gestures and facial expressions, emotes, preset phrases (moderated), waves, and in-game celebrations.</li>
+                    <li><strong>No advertising identifiers.</strong> We do not access or use the Meta Advertising ID for any child user.</li>
+                    <li><strong>No behavioral profiling.</strong> We do not build behavioral profiles, infer interests, or perform analytics that link to a child user beyond what is necessary to operate gameplay.</li>
+                    <li><strong>High privacy by default.</strong> All optional privacy-impacting features default to off for child accounts, in alignment with the UK Age-Appropriate Design Code.</li>
+                    <li><strong>Limited data collection.</strong> The information we process for child users is strictly limited to what is necessary to operate the app: Meta user ID, display name, profile photo, age group, avatar, gameplay state, blocked users, and (within the child pool) followers, parties, and invites.</li>
+                </ul>
+
+                <p><strong>Parental controls.</strong> Meta requires a parent or legal guardian to create and manage the Meta account of any child user aged 10&ndash;12, and to verify their identity via approved means such as government ID upload through Yoti or a verified payment method. Meta&rsquo;s parent-managed account flow includes parental controls for time limits, app installation, social-feature toggles, and account oversight. You can review and adjust those controls through the Meta Family Center at <a href="https://familycenter.meta.com/">familycenter.meta.com</a>.</p>
+
+                <p><strong>COPPA.</strong> Meta&rsquo;s parental consent flow covers the Meta account itself and Meta services &mdash; it does not automatically extend to third-party apps such as Crazy Golf VR. Because we do not collect voice from child users, do not use advertising identifiers, do not perform behavioral profiling, and limit data collection to what is strictly necessary to operate the gameplay experience described above, we do not require additional verifiable parental consent under the U.S. Children&rsquo;s Online Privacy Protection Act (COPPA) for child users of Crazy Golf VR. A parent or legal guardian who believes a child&rsquo;s information has been collected in error, or who wishes to review or request deletion of a child&rsquo;s data, may contact us at <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a>.</p>
+
+                <p>Crazy Golf VR is not designed for, and Meta does not permit, use by children under the age of 10.</p>
 
                 <h3>Data Storage and Retention</h3>
-                <p>Your profile, leaderboard scores, and gameplay history are stored securely on Meta-hosted services and within your
-                device storage. We retain this information while you maintain an active Tee Time VR profile. Diagnostic logs are
-                retained for up to 12 months unless we need them longer to investigate an issue. Support correspondence is retained
-                for as long as necessary to resolve your request and to comply with legal obligations.</p>
+                <p>We retain personal information only as long as necessary to provide the service or comply with our legal obligations:</p>
+                <ul>
+                    <li><strong>Account-linked progress, preferences, and leaderboard scores</strong> &mdash; retained while you maintain an active Crazy Golf VR profile, or until you request deletion.</li>
+                    <li><strong>Voice audio</strong> &mdash; not retained. Transmitted and discarded in real time.</li>
+                    <li><strong>Voice / connection metadata via Vivox</strong> &mdash; truncated IP address, user ID, and device ID retained by Vivox for up to 30 days for routing and abuse prevention.</li>
+                    <li><strong>Text chat content via Vivox (where offered)</strong> &mdash; retained for up to 7 days by default.</li>
+                    <li><strong>Diagnostic and crash logs</strong> &mdash; retained for up to 12 months unless we need them longer to investigate an ongoing issue.</li>
+                    <li><strong>Support correspondence</strong> &mdash; retained for as long as necessary to resolve your request and meet legal obligations.</li>
+                    <li><strong>Backups</strong> &mdash; automated backups may retain data for an additional 30 days after primary deletion before being overwritten.</li>
+                </ul>
 
                 <h3>Sharing Your Information</h3>
-                <p>We do not share your personal information with independent third parties. Meta Platforms, Inc. processes the data
-                described above as part of providing platform services such as account authentication, matchmaking, and cloud
-                storage. Multiplayer participants can see your display name, avatar, voice chat audio (if enabled), and gameplay
-                actions during a session.</p>
+                <p>We do not sell, license, rent, or lend your personal information to third parties. We share information only with the following categories of recipients, each acting as a data processor on our behalf or under their own platform terms:</p>
+                <ul>
+                    <li><strong>Meta Platforms, Inc.</strong> &mdash; provides authentication, Meta Avatars, age-group signaling, Followers / Parties / Invites / Blocked Users platform features, and store distribution. Meta&rsquo;s handling of your data on the Meta platform is governed by Meta&rsquo;s own privacy policy at <a href="https://www.meta.com/legal/privacy-policy/">meta.com/legal/privacy-policy/</a>.</li>
+                    <li><strong>Unity Technologies (Vivox and multiplayer relay).</strong> &mdash; provides voice transmission via Vivox and may provide multiplayer network relay. Unity acts as our processor under the GDPR and our service provider under the CCPA. Unity&rsquo;s data processing terms are at <a href="https://unity.com/legal/unity-data-processing-addendum-dpa">unity.com/legal/unity-data-processing-addendum-dpa</a>. Unity&rsquo;s privacy policy is at <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</li>
+                    <li><strong>Other players in your session.</strong> Participants in a multiplayer session can see your display name, avatar, and in-game actions, and (in 13+ voice channels) hear your voice while you are unmuted.</li>
+                    <li><strong>Law enforcement or legal authorities.</strong> Only when required by valid legal process or to protect users or our rights.</li>
+                </ul>
+                <p>We do not transfer your data to third-party advertising networks, data brokers, analytics resellers, or AI training datasets.</p>
 
                 <h3>Your Rights and Choices</h3>
-                <p>All players, regardless of where they live, may request access to, correction of, or deletion of their personal
-                information. To exercise these rights, email us at the address below with your Meta display name or user ID so that we
-                can verify your account. You can also review or update certain account details directly through your Meta account
-                settings. When you ask us to delete your Tee Time VR profile, we will coordinate with Meta to remove stored data
-                associated with your user ID and confirm once the deletion is complete. We do not charge any fees for handling privacy
-                requests.</p>
+                <p>All users, regardless of where they live, may exercise the following rights free of charge by emailing <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a> with your Meta display name or Meta user ID so we can verify your account:</p>
+                <ul>
+                    <li>Request access to the personal information we hold about you;</li>
+                    <li>Request correction of inaccurate information;</li>
+                    <li>Request deletion of your personal information;</li>
+                    <li>Request a copy of your data in a portable format;</li>
+                    <li>Withdraw consent for optional processing (such as voice chat);</li>
+                    <li>Object to or restrict certain processing.</li>
+                </ul>
+                <p>We respond to verified requests within 30 days. We do not charge fees for handling privacy requests. If we are unable to fulfill your request, we will explain why.</p>
 
-                <h3>Children's Privacy</h3>
-                <p>Tee Time VR is not directed to children under the age of 13. We do not knowingly process personal information from
-                children under 13. If you believe that a child has provided us with personal information, please contact us so that we
-                can take appropriate action.</p>
+                <p><strong>European Economic Area / United Kingdom (GDPR / UK GDPR).</strong> In addition to the rights above, you have the right to lodge a complaint with your local data protection authority.</p>
+
+                <p><strong>California (CCPA / CPRA).</strong> California residents have the right to know what personal information is collected, the right to delete, the right to correct, the right to opt out of the sale or sharing of personal information for cross-context behavioral advertising, and the right to limit the use of sensitive personal information. <strong>We do not sell or share personal information for cross-context behavioral advertising.</strong> We do not knowingly process the personal information of California residents under the age of 16 without opt-in consent.</p>
+
+                <p><strong>Quebec, Canada (Law 25).</strong> Quebec residents have the right to access, rectify, withdraw consent, request portability, request de-indexing, and lodge a complaint with the Commission d&rsquo;accès à l&rsquo;information du Québec (CAI). The person responsible for the protection of personal information at Fiskar Varmations is Avi Varma, contactable at the email above.</p>
+
+                <p><strong>Canada (PIPEDA).</strong> Canadian residents have the right to access their personal information, request correction, withdraw consent, and lodge a complaint with the Office of the Privacy Commissioner of Canada.</p>
+
+                <p>You can also review or update account details through your Meta account settings, and use Meta&rsquo;s privacy controls and data-access tools at <a href="https://www.meta.com/privacy-center/">meta.com/privacy-center/</a>.</p>
+
+                <h3>Security</h3>
+                <p>We maintain administrative, technical, and physical safeguards designed to protect your personal information, including:</p>
+                <ul>
+                    <li>Use of Meta&rsquo;s authenticated platform services for account access &mdash; we do not collect or store your Meta login credentials;</li>
+                    <li>Encryption in transit for data transmitted between our app, Meta, and Unity Technologies;</li>
+                    <li>Access-control and least-privilege practices for support correspondence and any data we receive;</li>
+                    <li>Routine review of access logs and incident response procedures.</li>
+                </ul>
+                <p>No security measure is perfect. If we become aware of unauthorized access to your information, we will notify Meta and, where required by law, notify affected users and applicable authorities without undue delay.</p>
+
+                <p><strong>Security vulnerability reporting.</strong> If you discover a security vulnerability in Crazy Golf VR, email <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a> with the subject prefix <strong>[Security]</strong>. We acknowledge security reports within five business days and work to resolve confirmed issues promptly. We do not pursue legal action against good-faith security researchers who follow this reporting process.</p>
+
+                <h3>International Data Transfers</h3>
+                <p>Fiskar Varmations is based in Calgary, Alberta, Canada. Meta Platforms, Inc. and Unity Technologies are headquartered in the United States with global infrastructure. By using Crazy Golf VR, you understand that your data may be transferred to and processed in countries other than your country of residence, including Canada and the United States.</p>
+                <p>For transfers from the European Economic Area, the United Kingdom, or Switzerland to countries that do not provide an adequate level of data protection under the GDPR, we rely on the European Commission&rsquo;s Standard Contractual Clauses and, for UK transfers, the UK International Data Transfer Addendum, executed through our processors&rsquo; standard agreements.</p>
 
                 <h3>Changes to This Privacy Policy</h3>
-                <p>We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy
-                here and revise the effective date. Continued use of Tee Time VR after the changes become effective means you accept
-                the updated policy.</p>
+                <p>We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy here, revise the effective date above, and (where required by law) notify users through the app or by email. Continued use of Crazy Golf VR after the changes take effect means you accept the updated policy.</p>
 
                 <h3>Contact Us</h3>
-                <p>If you have any questions about this Privacy Policy or wish to exercise your privacy rights, please contact Avi
-                Varma at <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a>.</p>
+                <p>If you have any questions about this Privacy Policy or wish to exercise your privacy rights, please contact Avi Varma at <a href="mailto:HarshvardhanV98@gmail.com">HarshvardhanV98@gmail.com</a>.</p>
+                <p>For security vulnerability reports, use the same email with subject prefix <strong>[Security]</strong>. For abuse or conduct reports, use subject prefix <strong>[Report]</strong>.</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tee Time VR. All rights reserved.</p>
+            <p>&copy; 2026 Crazy Golf VR. All rights reserved.</p>
         </div>
     </footer>
 </body>
