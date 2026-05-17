@@ -341,6 +341,39 @@ section {
     width: 100%;
 }
 
+.trailer-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.trailer-link img {
+    display: block;
+    width: 100%;
+}
+
+.trailer-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    background: rgba(5, 26, 47, 0.35);
+    transition: background 0.2s ease;
+}
+
+.trailer-play i {
+    font-size: 1.3rem;
+}
+
+.trailer-link:hover .trailer-play {
+    background: rgba(5, 26, 47, 0.55);
+}
+
 .elevated-card {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
