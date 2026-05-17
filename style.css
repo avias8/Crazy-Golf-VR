@@ -242,7 +242,7 @@ a {
     padding: 14px;
     background: linear-gradient(140deg, rgba(91, 255, 177, 0.18), rgba(37, 99, 235, 0.2));
     box-shadow: var(--shadow-soft);
-    aspect-ratio: 10 / 3;
+    aspect-ratio: 2 / 1;
     display: flex;
 }
 
