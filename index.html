@@ -3,200 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Golf VR — Mini-golf with dinosaurs, lava and a race against the clock</title>
-    <meta name="description" content="Crazy Golf VR is multiplayer mini-golf for Meta Quest. Race the clock across six wild courses — a volcano, a sunken reef, crystal caverns — solo, in co-op or 2v2.">
+    <title>Crazy Golf VR — Race the clock. Dodge the dinos.</title>
+    <meta name="description" content="Crazy Golf VR is multiplayer mini-golf for Meta Quest. Race the clock across six wild courses — a lava volcano, a sunken reef, crystal caves — solo, in co-op, or 2v2.">
     <link rel="canonical" href="https://www.avivarma.ca/Crazy-Golf-VR/">
-    <meta name="theme-color" content="#1f4d2e">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#0a1d15">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Crazy Golf VR">
-    <meta property="og:title" content="Crazy Golf VR — mini-golf with dinosaurs, lava and a race against the clock">
-    <meta property="og:description" content="Race the clock across six wild courses on Meta Quest — solo, in co-op, or 2v2.">
+    <meta property="og:title" content="Crazy Golf VR — Race the clock. Dodge the dinos.">
+    <meta property="og:description" content="Multiplayer mini-golf for Meta Quest: six wild courses, one clock. Solo, co-op, or 2v2.">
     <meta property="og:url" content="https://www.avivarma.ca/Crazy-Golf-VR/">
     <meta property="og:image" content="https://www.avivarma.ca/Crazy-Golf-VR/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Crazy Golf VR — mini-golf with dinosaurs, lava and a race against the clock">
-    <meta name="twitter:description" content="Race the clock across six wild courses on Meta Quest — solo, in co-op, or 2v2.">
+    <meta name="twitter:title" content="Crazy Golf VR — Race the clock. Dodge the dinos.">
+    <meta name="twitter:description" content="Multiplayer mini-golf for Meta Quest: six wild courses, one clock. Solo, co-op, or 2v2.">
     <meta name="twitter:image" content="https://www.avivarma.ca/Crazy-Golf-VR/og-image.jpg">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <link rel="preload" as="image" href="assets/img/logo-full.webp" type="image/webp">
+    <script src="assets/site.js" defer></script>
 </head>
-<body id="top">
-    <header class="site-header">
-        <div class="container nav-container">
-            <a class="brand" href="#top">Crazy Golf VR</a>
-            <nav class="nav-links">
-                <a href="#video-section">Watch</a>
-                <a href="#features-section">Features</a>
-                <a href="#community-section">Play together</a>
-                <a href="#screenshots-section">Courses</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" data-nav>
+        <div class="container nav__bar">
+            <a class="brand" href="#top" aria-label="Crazy Golf VR home">
+                <picture>
+                    <source srcset="assets/img/logo-emblem-sm.webp" type="image/webp">
+                    <img src="assets/img/logo-emblem-sm.png" alt="" width="44" height="44">
+                </picture>
+                <span>Crazy Golf VR</span>
+            </a>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+                <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="sr-only">Menu</span>
+            </button>
+            <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+                <a href="#how">How it plays</a>
+                <a href="#courses">Courses</a>
+                <a href="#modes">Modes</a>
+                <a href="#dinos">Dinos</a>
+                <a href="#together">Play together</a>
+                <a class="btn btn--lime btn--sm" href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer">Get it on Quest</a>
             </nav>
-            <a href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer" class="nav-cta">Play on Quest</a>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-background" aria-hidden="true"></div>
-            <div class="container hero-grid">
-                <div class="hero-text">
-                    <span class="hero-pill">New campaign on Meta Quest</span>
-                    <h1>Mini-golf with dinosaurs, lava, and a race against the clock.</h1>
-                    <p>Crazy Golf VR sends you from a hidden jungle glade to a sunken reef, through crystal caverns and across a volcano. Strokes don&apos;t count here — the clock does. Grab a club, find the hole, and set a time your friends have to beat.</p>
-                    <div class="hero-actions">
-                        <a href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer" class="cta-button">Download on Quest</a>
-                        <a href="#video-section" class="secondary-button"><i class="fa-solid fa-play"></i> See it in motion</a>
-                    </div>
-                    <ul class="hero-stats">
-                        <li><span>Six courses</span> Forest, mountains, caverns, a volcano, and a reef — plus a tutorial glade.</li>
-                        <li><span>Race the clock</span> Unlimited strokes. Your time goes on the Meta Horizon leaderboards.</li>
-                        <li><span>Play together</span> Solo, co-op for two to four, or two-versus-two.</li>
-                    </ul>
+    <main id="main">
+        <section class="hero" id="top">
+            <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg" aria-hidden="true" data-hero-video>
+                <source src="assets/video/reef-loop.mp4" type="video/mp4">
+            </video>
+            <div class="hero__shade" aria-hidden="true"></div>
+            <div class="container hero__inner">
+                <picture class="hero__logo">
+                    <source srcset="assets/img/logo-full.webp" type="image/webp">
+                    <img src="assets/img/logo-full.png" alt="Crazy Golf VR — Multiplayer" width="900" height="842">
+                </picture>
+                <p class="eyebrow">VR mini-golf for Meta Quest</p>
+                <h1 class="hero__title">Race the clock.<br><span>Dodge the dinos.</span></h1>
+                <p class="hero__lede">Six hand-built courses — a lava-soaked volcano, a sunken reef, crystal caves and a desert canyon. Strokes are unlimited. The clock is not.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--lime btn--lg" href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer">Get it on Meta Quest</a>
+                    <a class="btn btn--ghost btn--lg" href="#courses">Explore the courses</a>
                 </div>
-                <div class="hero-media">
-                    <div class="media-frame">
-                        <img src="HeroImage.jpg" alt="The Sunken Sanctuary course: a reef trail winds past purple coral and a shipwreck toward a giant shell arch.">
+                <p class="hero__platform">
+                    <span>Available on</span>
+                    <img src="assets/img/meta-quest-white.png" alt="Meta Quest" width="160" height="20">
+                </p>
+            </div>
+            <a class="hero__scroll" href="#how" aria-label="Scroll to how it plays"><span></span></a>
+        </section>
+
+        <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker">
+            <div class="ticker__track">
+                <span>6 courses</span><i>★</i><span>1–4 players</span><i>★</i><span>2v2 team races</span><i>★</i><span>Dinosaurs</span><i>★</i><span>Plunger gun</span><i>★</i><span>World leaderboards</span><i>★</i><span>No penalties</span><i>★</i>
+                <span>6 courses</span><i>★</i><span>1–4 players</span><i>★</i><span>2v2 team races</span><i>★</i><span>Dinosaurs</span><i>★</i><span>Plunger gun</span><i>★</i><span>World leaderboards</span><i>★</i><span>No penalties</span><i>★</i>
+            </div>
+        </div>
+        </div>
+
+        <section class="section how" id="how">
+            <div class="container how__grid">
+                <div class="how__copy">
+                    <p class="eyebrow">How it plays</p>
+                    <h2 class="display">Every hole is a race</h2>
+                    <p class="lede">Forget the scorecard. In Crazy Golf VR your time is the score — take as many shots as you need, just sink it fast.</p>
+                    <ol class="steps">
+                        <li>
+                            <span class="steps__num">01</span>
+                            <div>
+                                <h3>Tee off</h3>
+                                <p>Grab your club and swing for real. A beacon of light follows your ball so you never lose it.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="steps__num">02</span>
+                            <div>
+                                <h3>Chase it down</h3>
+                                <p>Walk or teleport after your ball and hit again from wherever it lands. Lose it, and it comes back to its last safe spot.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="steps__num">03</span>
+                            <div>
+                                <h3>Beat the clock</h3>
+                                <p>Sink the putt to stop the timer. Personal bests and world ranks land on the Meta Horizon leaderboards.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <figure class="how__hud">
+                    <picture>
+                        <source srcset="assets/img/hud-milestone.webp" type="image/webp">
+                        <img class="how__hud-card how__hud-card--top" src="assets/img/hud-milestone.png" alt="In-game milestone card: New club unlocked — The golden club." width="868" height="265" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="assets/img/hud-race.webp" type="image/webp">
+                        <img class="how__hud-card" src="assets/img/hud-race.png" alt="In-game race display: elapsed time, the time to beat, the world record, and distance to the ball and pin." width="1014" height="310" loading="lazy">
+                    </picture>
+                    <figcaption>The in-game race display: your time, the time to beat, and how far you are from the cup.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section courses" id="courses">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">The campaign</p>
+                    <h2 class="display">Six courses. One clock.</h2>
+                    <p class="lede">Start in the glade, then clear each course to unlock the next.</p>
+                </div>
+
+                <article class="course course--feature">
+                    <picture class="course__media">
+                        <source srcset="assets/img/course-glade.webp" type="image/webp">
+                        <img src="assets/img/course-glade.jpg" alt="A glowing golden egg in its nest with the prompt A Sleeping Surprise." width="960" height="640" loading="lazy">
+                    </picture>
+                    <div class="course__body">
+                        <span class="course__num">Start here</span>
+                        <h3 class="course__name">The Glade</h3>
+                        <p>Hatch the golden egg to earn your club, part the hedge, and follow a dinosaur guide to the shrine where the plunger gun waits. Three holes teach you everything.</p>
+                        <span class="chip">Tutorial</span>
                     </div>
-                    <p class="media-caption">The Sunken Sanctuary, from the current build of <strong>Crazy Golf VR</strong>.</p>
+                </article>
+
+                <div class="course-grid">
+                    <article class="course">
+                        <picture class="course__media">
+                            <source srcset="assets/img/course-field.webp" type="image/webp">
+                            <img src="assets/img/course-field.jpg" alt="Golf Field: a fairway beside a river, lined with pines under a blue sky." width="960" height="640" loading="lazy">
+                        </picture>
+                        <div class="course__body">
+                            <span class="course__num">01</span>
+                            <h3 class="course__name">Golf Field</h3>
+                            <p>A forest expedition along the river, with pterodactyls overhead.</p>
+                            <span class="chip">Par 15</span>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <picture class="course__media">
+                            <source srcset="assets/img/course-mountain.webp" type="image/webp">
+                            <img src="assets/img/course-mountain.jpg" alt="Golf Mountain: a dinosaur stands on a sunny fairway between white boulders." width="960" height="640" loading="lazy">
+                        </picture>
+                        <div class="course__body">
+                            <span class="course__num">02</span>
+                            <h3 class="course__name">Golf Mountain</h3>
+                            <p>Sunny boulder fields — and a very large dinosaur on the fairway.</p>
+                            <span class="chip">Par 15</span>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <picture class="course__media">
+                            <source srcset="assets/img/course-canyon.webp" type="image/webp">
+                            <img src="assets/img/course-canyon.jpg" alt="Sunscar Canyon: red sandstone walls, palms, and a natural arch ahead of the tee." width="960" height="640" loading="lazy">
+                        </picture>
+                        <div class="course__body">
+                            <span class="course__num">03</span>
+                            <h3 class="course__name">Sunscar Canyon</h3>
+                            <p>Race through the sandstone, under the arch and between the cliffs.</p>
+                            <span class="chip">Par 15</span>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <picture class="course__media">
+                            <source srcset="assets/img/course-crystal.webp" type="image/webp">
+                            <img src="assets/img/course-crystal.jpg" alt="Crystal Cavern: glowing blue crystals and the course map sign in a moonlit cave." width="960" height="640" loading="lazy">
+                        </picture>
+                        <div class="course__body">
+                            <span class="course__num">04</span>
+                            <h3 class="course__name">Crystal Cavern</h3>
+                            <p>Glowing crystals light the way through a moonlit cave.</p>
+                            <span class="chip">Par 15</span>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <picture class="course__media">
+                            <source srcset="assets/img/course-volcano.webp" type="image/webp">
+                            <img src="assets/img/course-volcano.jpg" alt="Golf Volcano: a river of lava pours down the volcano beside the fairway." width="960" height="640" loading="lazy">
+                        </picture>
+                        <div class="course__body">
+                            <span class="course__num">05</span>
+                            <h3 class="course__name">Golf Volcano</h3>
+                            <p>Rivers of lava, circling pterodactyls, and gongs to shoot with your plunger.</p>
+                            <span class="chip">Par 22</span>
+                        </div>
+                    </article>
+                    <article class="course">
+                        <picture class="course__media">
+                            <source srcset="assets/img/course-reef.webp" type="image/webp">
+                            <img src="assets/img/course-reef.jpg" alt="Sunken Sanctuary: a reef trail winds past coral and a shipwreck toward a giant shell arch." width="960" height="640" loading="lazy">
+                        </picture>
+                        <div class="course__body">
+                            <span class="course__num">06</span>
+                            <h3 class="course__name">Sunken Sanctuary</h3>
+                            <p>A reef trail on the sea floor, past the shipwreck and through the shell arch.</p>
+                            <span class="chip">Par 18</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="video-section" class="section-light">
-            <div class="container content-split">
-                <div class="video-stack">
-                    <div class="cover-art" aria-hidden="true">
-                        <img src="CoverArt.png" alt="Crazy Golf VR logo — bold wordmark with golf balls and clubs on a green background.">
-                    </div>
-                    <div class="video-wrapper elevated-card">
-                        <video src="gameplay-loop.mp4" poster="loop-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A slow drift along the Sunken Sanctuary reef trail, past coral and a shipwreck toward the shell arch."></video>
-                    </div>
+        <section class="section modes" id="modes">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Play your way</p>
+                    <h2 class="display">Solo, squad, or showdown</h2>
                 </div>
-                <div class="section-copy">
-                    <h2>Six courses, one clock</h2>
-                    <p>Every course is a hole you race to. Tee off, chase the ball as far as it takes, and sink it as fast as you can — the par is there for fun, not for scoring. Beat your own best time, then go after the world record.</p>
+                <div class="mode-grid">
+                    <article class="mode">
+                        <span class="mode__players">1 player</span>
+                        <h3>Solo</h3>
+                        <p>Your run, your record. Clear a course to unlock the next one, then come back to shave off seconds.</p>
+                    </article>
+                    <article class="mode mode--accent">
+                        <span class="mode__players">2–4 players</span>
+                        <h3>Co-op</h3>
+                        <p>One shared ball, one shared clock. Anyone can take the next shot — no waiting your turn.</p>
+                    </article>
+                    <article class="mode">
+                        <span class="mode__players">2 v 2</span>
+                        <h3>Team race</h3>
+                        <p>Each team gets its own ball. Both race for the same cup, and the first team to sink it wins.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section split" id="dinos">
+            <div class="container split__grid">
+                <div class="split__media">
+                    <picture>
+                        <source srcset="assets/img/feature-dino-tee.webp" type="image/webp">
+                        <img src="assets/img/feature-dino-tee.jpg" alt="A ball on the tee in Golf Mountain, with a dinosaur ahead and the sun over the peaks." width="1400" height="900" loading="lazy">
+                    </picture>
+                    <picture class="split__inset">
+                        <source srcset="assets/img/feature-pterodactyl.webp" type="image/webp">
+                        <img src="assets/img/feature-pterodactyl.jpg" alt="A pterodactyl over the Golf Volcano trailhead sign and a lava field." width="1400" height="900" loading="lazy">
+                    </picture>
+                </div>
+                <div class="split__copy">
+                    <p class="eyebrow">Clubs, plungers &amp; dinosaurs</p>
+                    <h2 class="display">The fairway fights back</h2>
                     <ul class="feature-list">
-                        <li><i class="fa-solid fa-stopwatch"></i> Your time is the score — strokes are unlimited.</li>
-                        <li><i class="fa-solid fa-trophy"></i> Personal bests and world ranks on the Meta Horizon leaderboards.</li>
-                        <li><i class="fa-solid fa-mountain-sun"></i> Forest river, alpine boulders, caverns, lava and reef.</li>
+                        <li><strong>The golden club.</strong> Hatched from an egg in the glade and in your hand for every course after.</li>
+                        <li><strong>The plunger gun.</strong> Draw it from your hip to ring gongs and drive off anything in your way.</li>
+                        <li><strong>Raptors.</strong> They hold the fairway. Push them back before they push you around.</li>
+                        <li><strong>Pterodactyls.</strong> Circling overhead from the forest to the volcano.</li>
                     </ul>
-                    <a href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer" class="secondary-button"><i class="fa-solid fa-play"></i> Watch the trailer on Meta</a>
                 </div>
             </div>
         </section>
 
-        <section id="features-section" class="section-dark">
-            <div class="container">
-                <h2>Why you&apos;ll love Crazy Golf VR</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="icon-wrap"><i class="fa-solid fa-egg"></i></div>
-                        <h3>A tutorial with a twist</h3>
-                        <p>Wake a golden egg to earn your first club, part the hedge, and follow a dinosaur guide to the shrine where the plunger gun is waiting.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-wrap"><i class="fa-solid fa-dragon"></i></div>
-                        <h3>Dinosaurs on the fairway</h3>
-                        <p>Raptors guard the greens and pterodactyls circle overhead. Drive them off with your plunger, ring the gongs, and keep your ball moving.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon-wrap"><i class="fa-solid fa-flag-checkered"></i></div>
-                        <h3>Clear, calm guidance</h3>
-                        <p>A light beacon marks your ball, and a compact heads-up display shows your time, the time to beat, and how far you are from the cup.</p>
-                    </div>
+        <section class="section split split--reverse" id="together">
+            <div class="container split__grid">
+                <div class="split__media">
+                    <picture>
+                        <source srcset="assets/img/feature-rooftop.webp" type="image/webp">
+                        <img src="assets/img/feature-rooftop.jpg" alt="The multiplayer city rooftop at night, with a lit skyline and the course leaderboard panel." width="1400" height="900" loading="lazy">
+                    </picture>
+                </div>
+                <div class="split__copy">
+                    <p class="eyebrow">Better with friends</p>
+                    <h2 class="display">Meet on the rooftop</h2>
+                    <p class="lede">Hang out with friends on a snowy city rooftop or in the grassy field, check the fastest times on the leaderboard, then pick a course and head out together.</p>
+                    <ul class="feature-list">
+                        <li><strong>Party up.</strong> Co-op and team races for up to four players.</li>
+                        <li><strong>Made for all ages.</strong> Kids and grown-ups share the green, with age-appropriate, safety-first multiplayer.</li>
+                        <li><strong>No penalties, no pressure.</strong> A lost ball returns to its last safe spot and the race goes on.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="section-highlight" id="community-section">
-            <div class="container highlight-grid">
-                <div class="highlight-media">
-                    <div class="highlight-media-frame">
-                        <img src="gallery-city.jpg" alt="The multiplayer rooftop at night, with a lit city skyline and the course leaderboard panel.">
-                    </div>
-                    <div class="highlight-media-note">The multiplayer rooftop, from the current build.</div>
-                </div>
-                <div class="highlight-copy">
-                    <div class="highlight-card">
-                        <span class="highlight-eyebrow">Better with friends</span>
-                        <h2>Meet on the rooftop. Tee off together.</h2>
-                        <p>Gather friends in the city rooftop or the grassy field, pick a course, and head out as a team. In co-op, two to four players share one ball — anyone can take the next shot. In two-versus-two, each team gets its own ball and the first team to sink it wins.</p>
-                        <ul class="highlight-list">
-                            <li>
-                                <span class="list-title">Shaped by 60,000+ installs</span>
-                                <span class="list-desc">Every honest review fed the rebuild — the swing, the guidance, the audio, and now the campaign.</span>
-                            </li>
-                            <li>
-                                <span class="list-title">Made for all ages</span>
-                                <span class="list-desc">Kids and grown-ups share the green, with age-appropriate, safety-first multiplayer.</span>
-                            </li>
-                            <li>
-                                <span class="list-title">No penalties, no pressure</span>
-                                <span class="list-desc">Lose your ball and it comes back to its last safe spot. The race goes on.</span>
-                            </li>
-                        </ul>
-                        <a href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer" class="highlight-cta">Play the latest build</a>
-                    </div>
-                </div>
+        <section class="proof">
+            <div class="container proof__grid">
+                <div><strong>60,000+</strong><span>installs on Meta Quest</span></div>
+                <div><strong>6</strong><span>courses plus the glade</span></div>
+                <div><strong>1–4</strong><span>players, solo to 2v2</span></div>
+                <div><strong>0</strong><span>stroke penalties</span></div>
             </div>
         </section>
 
-        <section id="screenshots-section" class="section-gallery">
-            <div class="container">
-                <h2>Inside the courses</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot-item">
-                        <img src="gallery-volcano.jpg" alt="Golf Volcano: a river of lava pours down the volcano beside the fairway." loading="lazy">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="gallery-mountains.jpg" alt="Golf Mountains: a dinosaur stands on a sunny fairway between white boulders." loading="lazy">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="gallery-introduction.jpg" alt="The tutorial glade: a glowing golden egg in its nest with the prompt A Sleeping Surprise." loading="lazy">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="gallery-reef.jpg" alt="Sunken Sanctuary: the reef trail curves under a giant shell arch as a fish swims past." loading="lazy">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="gallery-trailhead.jpg" alt="The Golf Volcano trailhead sign beside a lava field, with a pterodactyl overhead." loading="lazy">
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="gallery-cavern.jpg" alt="Crystal Cavern: glowing blue crystals and the course map sign in a moonlit cave." loading="lazy">
-                    </div>
+        <section class="final" id="get">
+            <picture class="final__bg" aria-hidden="true">
+                <source srcset="assets/img/feature-shell-arch.webp" type="image/webp">
+                <img src="assets/img/feature-shell-arch.jpg" alt="" width="1400" height="900" loading="lazy">
+            </picture>
+            <div class="container final__inner">
+                <picture class="final__emblem">
+                    <source srcset="assets/img/logo-emblem.webp" type="image/webp">
+                    <img src="assets/img/logo-emblem.png" alt="Crazy Golf VR" width="480" height="480" loading="lazy">
+                </picture>
+                <h2 class="display">Ready to race?</h2>
+                <p class="lede">Crazy Golf VR is live on Meta Quest and gets better with every update. Set a time — then make your friends beat it.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--lime btn--lg" href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer">Get it on Meta Quest</a>
+                    <a class="btn btn--ghost btn--lg" href="mailto:HarshvardhanV98@gmail.com">Contact the developer</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <section id="cta-section" class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2>Ready to race the clock?</h2>
-                <p>Crazy Golf VR is live on Meta Quest and getting better with every update. Jump in, set a time, and tell us what you&apos;d like to see next.</p>
-                <div class="cta-actions">
-                    <a href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer" class="cta-button large">Get Crazy Golf VR on Quest</a>
-                    <a href="mailto:HarshvardhanV98@gmail.com" class="secondary-button">Contact the developer</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <p class="brand">Crazy Golf VR</p>
-                <p>© 2026 Crazy Golf VR. All rights reserved.</p>
-            </div>
-            <nav>
+    <footer class="footer">
+        <div class="container footer__grid">
+            <a class="brand" href="#top">
+                <picture>
+                    <source srcset="assets/img/logo-emblem-sm.webp" type="image/webp">
+                    <img src="assets/img/logo-emblem-sm.png" alt="" width="40" height="40" loading="lazy">
+                </picture>
+                <span>Crazy Golf VR</span>
+            </a>
+            <nav class="footer__links" aria-label="Footer">
+                <a href="https://www.meta.com/en-gb/experiences/crazy-golf-vr/7242557155836637/?require_login=true" target="_blank" rel="noopener noreferrer">Meta Quest Store</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
+                <a href="mailto:HarshvardhanV98@gmail.com">Contact</a>
             </nav>
+            <p class="footer__legal">© 2026 Crazy Golf VR. All rights reserved. Meta Quest is a trademark of Meta Platforms, Inc.</p>
         </div>
     </footer>
 </body>
