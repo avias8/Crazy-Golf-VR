@@ -166,7 +166,7 @@ a { color: inherit; }
     display: grid;
     align-items: center;
     overflow: hidden;
-    padding: 96px 0 84px;
+    padding: 96px 0 128px;
     isolation: isolate;
 }
 .hero__video {
@@ -212,30 +212,81 @@ a { color: inherit; }
 }
 .hero__platform img { width: 150px; height: auto; opacity: 0.9; }
 
-.hero__scroll {
+/* Scroll cue: a ball rolls down a putting line and drops into the cup. */
+.scroll-cue {
     position: absolute;
     left: 50%;
-    bottom: 26px;
-    width: 30px;
-    height: 48px;
-    margin-left: -15px;
-    border: 2px solid rgba(246, 240, 224, 0.5);
-    border-radius: 999px;
+    bottom: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px 4px 10px; /* a comfortable hit area */
+    text-decoration: none;
+    color: rgba(246, 240, 224, 0.62);
+    transition: color 0.2s ease;
 }
-.hero__scroll span {
+.scroll-cue:hover { color: var(--lime); }
+.scroll-cue__line {
+    position: relative;
+    width: 2px;
+    height: 36px;
+    background: repeating-linear-gradient(180deg, rgba(234, 255, 110, 0.55) 0 4px, transparent 4px 8px);
+    border-radius: 2px;
+}
+.scroll-cue__ball {
     position: absolute;
     left: 50%;
-    top: 9px;
-    width: 4px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #ffffff 0 35%, #e3e8dc 60%, #aeb8a6 100%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    animation: putt 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+.scroll-cue__cup {
+    position: relative;
+    width: 30px;
     height: 10px;
-    margin-left: -2px;
-    border-radius: 2px;
-    background: var(--lime);
-    animation: scroll-cue 1.8s ease-in-out infinite;
+    margin-top: -1px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 35%, #020604 0 55%, #0b1a10 100%);
+    box-shadow: 0 0 0 1.5px rgba(234, 255, 110, 0.55), 0 0 12px rgba(234, 255, 110, 0.25);
+}
+.scroll-cue__cup::before { /* the flag pin */
+    content: '';
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+    width: 1.5px;
+    height: 26px;
+    background: rgba(246, 240, 224, 0.7);
+}
+.scroll-cue__cup::after { /* the flag */
+    content: '';
+    position: absolute;
+    left: 26.5px;
+    bottom: 22px;
+    width: 12px;
+    height: 8px;
+    background: var(--orange);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    animation: flag 2.4s ease-in-out infinite;
+    transform-origin: left center;
 }
 
+@keyframes putt {
+    0% { transform: translateY(-4px) scale(1); opacity: 0; }
+    12% { opacity: 1; }
+    68% { transform: translateY(26px) scale(1); opacity: 1; }
+    80% { transform: translateY(32px) scale(0.55); opacity: 0.85; }
+    86%, 100% { transform: translateY(34px) scale(0.25); opacity: 0; }
+}
+@keyframes flag { 0%, 70%, 100% { transform: scaleX(1); } 80% { transform: scaleX(0.7); } 90% { transform: scaleX(1.1); } }
+
 @keyframes float { 50% { transform: translateY(-10px) rotate(-1deg); } }
-@keyframes scroll-cue { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
 
 /* ---------- Ticker ---------- */
 
@@ -501,5 +552,6 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    .scroll-cue__ball { transform: translateY(22px); opacity: 1; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
 }
