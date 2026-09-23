@@ -205,6 +205,19 @@ a {
     background: rgba(255, 255, 255, 0.1);
 }
 
+/* On light sections the default pale button disappears; use the navy text colour. */
+.section-light .secondary-button {
+    margin-top: 12px;
+    background: rgba(15, 23, 42, 0.06);
+    color: var(--midnight);
+    border: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+.section-light .secondary-button:hover,
+.section-light .secondary-button:focus {
+    background: rgba(15, 23, 42, 0.1);
+}
+
 .hero-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -487,7 +500,12 @@ section {
 }
 
 .highlight-media-frame {
-    display: none;
+    display: block;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--border-color);
 }
 
 .highlight-media-frame::after {
@@ -495,7 +513,10 @@ section {
 }
 
 .highlight-media-frame img {
-    display: none;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .highlight-media-note {
@@ -605,7 +626,7 @@ section {
 
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
 }
 
