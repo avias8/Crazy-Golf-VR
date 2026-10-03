@@ -367,45 +367,121 @@ a { color: inherit; }
     pointer-events: none;
 }
 
-.course {
+
+/* The course select: a stage plays the chosen course; the rail lists all seven in unlock order.
+   Without JavaScript the panels simply stack as a list. */
+.showcase__stage { display: grid; gap: clamp(48px, 7vw, 72px); }
+.showcase__panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(28px, 4vw, 60px);
+}
+.showcase__media {
     position: relative;
+    aspect-ratio: 16 / 9;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    background: var(--forest-850);
-    border: 1px solid var(--line-soft);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    background: var(--forest-950);
+    box-shadow: var(--shadow);
+    isolation: isolate;
 }
-.course:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5); border-color: var(--line); }
-.course__media { aspect-ratio: 3 / 2; overflow: hidden; }
-.course__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-.course:hover .course__media img { transform: scale(1.05); }
-/* Each card plays a short muted loop of its course (posters until it scrolls into view). */
-.course__media video { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--forest-900); transition: transform 0.6s ease; }
-.course:hover .course__media video { transform: scale(1.05); }
-.course__body { padding: 22px 24px 26px; position: relative; }
-.course__num {
+.showcase__media::after {
+    content: '';
     position: absolute;
-    top: -24px;
-    left: 22px;
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-family: var(--display);
-    font-size: 1rem;
-    color: var(--ink);
-    background: var(--lime);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), inset 0 -3px 0 var(--lime-deep);
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(246, 240, 224, 0.08), inset 0 -80px 90px -60px rgba(6, 18, 13, 0.6);
+    pointer-events: none;
 }
-.course__name { font-family: var(--display); font-weight: 400; font-size: 1.4rem; margin: 14px 0 8px; color: var(--cream); }
-.course__body p { margin: 0 0 16px; color: var(--muted); font-size: 0.98rem; }
+.showcase__media video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.showcase__num {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lime);
+}
+.showcase__num span { color: var(--muted); }
+.showcase__name {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1;
+    margin: 0 0 14px;
+    color: var(--cream);
+    text-wrap: balance;
+}
+.showcase__info p { margin: 0 0 18px; color: var(--muted); }
+.showcase__tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; padding: 0; }
+.showcase__tags li {
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--cream);
+    background: rgba(246, 240, 224, 0.06);
+    border: 1px solid var(--line);
+}
 
-.course--feature { display: grid; grid-template-columns: 1.3fr 1fr; margin-bottom: 36px; }
-.course--feature .course__media { aspect-ratio: auto; min-height: 100%; }
-.course--feature .course__body { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: clamp(28px, 4vw, 48px); }
-.course--feature .course__num { position: static; margin-bottom: 4px; background: var(--gold); box-shadow: inset 0 -3px 0 #c9a24b; }
-.course--feature .course__name { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.showcase__rail { display: none; }
+.showcase.is-live .showcase__rail {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: clamp(30px, 4vw, 46px);
+}
+.showcase.is-live .showcase__stage { gap: 0; }
+.showcase.is-live .showcase__panel {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+}
+.showcase.is-live .showcase__panel.is-active { opacity: 1; visibility: visible; }
+.showcase.is-live .showcase__info { transform: translateY(10px); }
+/* Fades start one frame after setup, so the switch from list to stage never shows. */
+.showcase.is-ready .showcase__panel { transition: opacity 0.45s ease, visibility 0s linear 0.45s; }
+.showcase.is-ready .showcase__panel.is-active { transition: opacity 0.45s ease; }
+.showcase.is-ready .showcase__info { transition: transform 0.45s ease; }
+.showcase.is-live .is-active .showcase__info { transform: none; }
 
-.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 28px; }
+.showcase__tab {
+    display: grid;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+.showcase__tab img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0.5;
+    filter: saturate(0.6);
+    box-shadow: 0 0 0 1px var(--line-soft);
+    transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.showcase__tab:hover img, .showcase__tab:focus-visible img { opacity: 0.9; filter: none; transform: translateY(-3px); }
+.showcase__tab:focus-visible { outline: none; }
+.showcase__tab:focus-visible img { box-shadow: 0 0 0 2px var(--cream); }
+.showcase__tab[aria-selected="true"] img { opacity: 1; filter: none; box-shadow: 0 0 0 2px var(--lime), 0 14px 30px rgba(0, 0, 0, 0.45); }
+.showcase__tab-num { margin-top: 4px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.showcase__tab[aria-selected="true"] .showcase__tab-num { color: var(--lime); }
+.showcase__tab-name { font-size: 0.92rem; font-weight: 700; line-height: 1.2; color: var(--cream); }
+/* While it advances on its own, the active tab shows how long until the next course. */
+.showcase__progress { position: relative; height: 3px; margin-top: 4px; border-radius: 3px; background: var(--line-soft); overflow: hidden; opacity: 0; }
+.showcase__progress::after { content: ''; position: absolute; inset: 0; background: var(--lime); transform: scaleX(0); transform-origin: left; }
+.showcase.is-auto .showcase__progress { opacity: 1; }
+.showcase.is-auto .showcase__tab[aria-selected="true"] .showcase__progress::after { animation: showcase-progress 7s linear forwards; }
+.showcase.is-paused .showcase__progress::after, .showcase.is-offscreen .showcase__progress::after { animation-play-state: paused !important; }
+@keyframes showcase-progress { to { transform: scaleX(1); } }
 
 /* ---------- Modes ---------- */
 
@@ -500,10 +576,19 @@ a { color: inherit; }
     .split--reverse .split__media { order: 0; }
     .split__inset { right: 12px; bottom: -28px; width: 42%; }
     .split__copy { margin-top: 24px; }
-    .course-grid { grid-template-columns: repeat(2, 1fr); }
-    .course--feature { grid-template-columns: 1fr; }
-    .course--feature .course__media { aspect-ratio: 3 / 2; }
     .mode-grid { grid-template-columns: 1fr; }
+    .showcase__panel { grid-template-columns: 1fr; gap: 24px; }
+    .showcase.is-live .showcase__rail {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        grid-auto-columns: 150px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 4px 2px 10px;
+        margin-inline: -2px;
+        scrollbar-width: thin;
+    }
+    .showcase__tab { scroll-snap-align: start; }
     .proof__grid { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
 }
 
@@ -545,7 +630,6 @@ a { color: inherit; }
 
 @media (max-width: 620px) {
     body { font-size: 16px; }
-    .course-grid { grid-template-columns: 1fr; }
     .hero { padding-top: 96px; }
     .hero__actions .btn { width: 100%; }
     .brand span { font-size: 0.98rem; }

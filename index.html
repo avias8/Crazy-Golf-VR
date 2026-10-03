@@ -146,99 +146,151 @@
                     <p class="lede">Start in the glade, then clear each course to unlock the next.</p>
                 </div>
 
-                <article class="course course--feature">
-                    <div class="course__media">
-                        <video muted loop playsinline preload="none" poster="assets/img/course-glade.jpg" width="1200" height="800" data-autoplay-video aria-label="The dinosaur guide in its golf cap trots up the glade path toward you.">
+                <div class="showcase" data-showcase>
+                    <div class="showcase__stage">
+                <article class="showcase__panel" id="course-glade" role="tabpanel" aria-labelledby="tab-glade" data-course="glade">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-glade.jpg" width="1280" height="720" aria-label="The dinosaur guide in its golf cap trots up the glade path toward you.">
                             <source src="assets/video/course-glade.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="course__body">
-                        <span class="course__num">Start here</span>
-                        <h3 class="course__name">The Glade</h3>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Start here</span>
+                        <h3 class="showcase__name">The Glade</h3>
                         <p>Hatch the golden egg to earn your club, part the hedge, and follow a dinosaur guide to the shrine where the plunger gun waits. Three holes teach you everything.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>3 holes</li><li>Dinosaur guide</li><li>Plunger gun</li></ul>
                         <span class="chip">Tutorial</span>
                     </div>
                 </article>
-
-                <div class="course-grid">
-                    <article class="course">
-                        <div class="course__media">
-                            <video muted loop playsinline preload="none" poster="assets/img/course-field.jpg" width="840" height="560" data-autoplay-video aria-label="Golf Field: the fairway runs beside a river through the forest.">
-                                <source src="assets/video/course-field.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="course__body">
-                            <span class="course__num">01</span>
-                            <h3 class="course__name">Golf Field</h3>
-                            <p>A forest expedition along the river, with pterodactyls overhead.</p>
-                            <span class="chip">Par 15</span>
-                        </div>
-                    </article>
-                    <article class="course">
-                        <div class="course__media">
-                            <video muted loop playsinline preload="none" poster="assets/img/course-mountain.jpg" width="840" height="560" data-autoplay-video aria-label="Golf Mountain: a giant stegosaurus stands beyond the trees on a sunny fairway, beside a wooden launch ramp.">
-                                <source src="assets/video/course-mountain.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="course__body">
-                            <span class="course__num">02</span>
-                            <h3 class="course__name">Golf Mountain</h3>
-                            <p>Sunny boulder fields — and a very large dinosaur on the fairway.</p>
-                            <span class="chip">Par 15</span>
-                        </div>
-                    </article>
-                    <article class="course">
-                        <div class="course__media">
-                            <video muted loop playsinline preload="none" poster="assets/img/course-canyon.jpg" width="840" height="560" data-autoplay-video aria-label="Sunscar Canyon: flying under the great sandstone arch between the canyon walls.">
-                                <source src="assets/video/course-canyon.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="course__body">
-                            <span class="course__num">03</span>
-                            <h3 class="course__name">Sunscar Canyon</h3>
-                            <p>Race through the sandstone, under the arch and between the cliffs.</p>
-                            <span class="chip">Par 15</span>
-                        </div>
-                    </article>
-                    <article class="course">
-                        <div class="course__media">
-                            <video muted loop playsinline preload="none" poster="assets/img/course-crystal.jpg" width="840" height="560" data-autoplay-video aria-label="Crystal Cavern: amber crystals on rock pillars beside a stone causeway that curves over a dark chasm.">
-                                <source src="assets/video/course-crystal.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="course__body">
-                            <span class="course__num">04</span>
-                            <h3 class="course__name">Crystal Cavern</h3>
-                            <p>Five crystal halls under giant glowing crystals, on a stone causeway over deep chasms.</p>
-                            <span class="chip">Par 15</span>
-                        </div>
-                    </article>
-                    <article class="course">
-                        <div class="course__media">
-                            <video muted loop playsinline preload="none" poster="assets/img/course-volcano.jpg" width="840" height="560" data-autoplay-video aria-label="Golf Volcano: rivers of lava pour down the volcano beside the track.">
-                                <source src="assets/video/course-volcano.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="course__body">
-                            <span class="course__num">05</span>
-                            <h3 class="course__name">Golf Volcano</h3>
-                            <p>Rivers of lava, circling pterodactyls, and gongs to shoot with your plunger.</p>
-                            <span class="chip">Par 22</span>
-                        </div>
-                    </article>
-                    <article class="course">
-                        <div class="course__media">
-                            <video muted loop playsinline preload="none" poster="assets/img/course-reef.jpg" width="840" height="560" data-autoplay-video aria-label="Sunken Sanctuary: the reef trail winds past the shipwreck toward the giant shell arch.">
-                                <source src="assets/video/course-reef.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="course__body">
-                            <span class="course__num">06</span>
-                            <h3 class="course__name">Sunken Sanctuary</h3>
-                            <p>A reef trail on the sea floor, past the shipwreck and through the shell arch.</p>
-                            <span class="chip">Par 18</span>
-                        </div>
-                    </article>
+                <article class="showcase__panel" id="course-field" role="tabpanel" aria-labelledby="tab-field" data-course="field">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-field.jpg" width="1280" height="720" aria-label="Golf Field: the fairway runs beside a river through the forest.">
+                            <source src="assets/video/course-field.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Course 01 <span>/ 06</span></span>
+                        <h3 class="showcase__name">Golf Field</h3>
+                        <p>A forest expedition along the river. Ring the gongs to drop the drawbridges, with pterodactyls circling overhead.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>River crossings</li><li>Gong drawbridges</li><li>Pterodactyls</li></ul>
+                        <span class="chip">Par 15</span>
+                    </div>
+                </article>
+                <article class="showcase__panel" id="course-mountain" role="tabpanel" aria-labelledby="tab-mountain" data-course="mountain">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-mountain.jpg" width="1280" height="720" aria-label="Golf Mountain: a giant stegosaurus stands beyond the trees on a sunny fairway, beside a wooden launch ramp.">
+                            <source src="assets/video/course-mountain.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Course 02 <span>/ 06</span></span>
+                        <h3 class="showcase__name">Golf Mountain</h3>
+                        <p>Sunny boulder fields high above the lake, and a very large dinosaur on the fairway.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>Giant stegosaurus</li><li>Launch ramp</li><li>Bumpers</li></ul>
+                        <span class="chip">Par 15</span>
+                    </div>
+                </article>
+                <article class="showcase__panel" id="course-canyon" role="tabpanel" aria-labelledby="tab-canyon" data-course="canyon">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-canyon.jpg" width="1280" height="720" aria-label="Sunscar Canyon: flying under the great sandstone arch between the canyon walls.">
+                            <source src="assets/video/course-canyon.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Course 03 <span>/ 06</span></span>
+                        <h3 class="showcase__name">Sunscar Canyon</h3>
+                        <p>Race through the red sandstone, under the great arch and between the cliffs.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>Sandstone arch</li><li>Canyon walls</li></ul>
+                        <span class="chip">Par 15</span>
+                    </div>
+                </article>
+                <article class="showcase__panel" id="course-crystal" role="tabpanel" aria-labelledby="tab-crystal" data-course="crystal">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-crystal.jpg" width="1280" height="720" aria-label="Crystal Cavern: amber crystals on rock pillars beside a stone causeway that curves over a dark chasm.">
+                            <source src="assets/video/course-crystal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Course 04 <span>/ 06</span></span>
+                        <h3 class="showcase__name">Crystal Cavern</h3>
+                        <p>Five halls deep underground, lit by giant crystals hanging from the roof. The fairway runs along a stone causeway over deep chasms.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>Five crystal halls</li><li>Chasm causeway</li><li>Amber bank shot</li></ul>
+                        <span class="chip">Par 15</span>
+                    </div>
+                </article>
+                <article class="showcase__panel" id="course-volcano" role="tabpanel" aria-labelledby="tab-volcano" data-course="volcano">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-volcano.jpg" width="1280" height="720" aria-label="Golf Volcano: rivers of lava pour down the volcano beside the track.">
+                            <source src="assets/video/course-volcano.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Course 05 <span>/ 06</span></span>
+                        <h3 class="showcase__name">Golf Volcano</h3>
+                        <p>Rivers of lava, circling pterodactyls, and gongs to shoot with your plunger.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>Lava rivers</li><li>Gong drawbridges</li><li>Pterodactyls</li></ul>
+                        <span class="chip">Par 22</span>
+                    </div>
+                </article>
+                <article class="showcase__panel" id="course-reef" role="tabpanel" aria-labelledby="tab-reef" data-course="reef">
+                    <div class="showcase__media">
+                        <video muted loop playsinline preload="none" poster="assets/img/course-reef.jpg" width="1280" height="720" aria-label="Sunken Sanctuary: the reef trail winds past the shipwreck toward the giant shell arch.">
+                            <source src="assets/video/course-reef.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase__info">
+                        <span class="showcase__num">Course 06 <span>/ 06</span></span>
+                        <h3 class="showcase__name">Sunken Sanctuary</h3>
+                        <p>A reef trail on the sea floor, past the shipwreck and through the giant shell arch.</p>
+                        <ul class="showcase__tags" aria-label="Highlights"><li>Shipwreck</li><li>Shell arch</li><li>Swimming raptor</li></ul>
+                        <span class="chip">Par 18</span>
+                    </div>
+                </article>
+                    </div>
+                    <div class="showcase__rail" role="tablist" aria-label="Choose a course">
+                    <button class="showcase__tab" type="button" role="tab" id="tab-glade" aria-controls="course-glade" aria-selected="true">
+                        <img src="assets/img/course-glade.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">Start</span>
+                        <span class="showcase__tab-name">The Glade</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    <button class="showcase__tab" type="button" role="tab" id="tab-field" aria-controls="course-field" aria-selected="false" tabindex="-1">
+                        <img src="assets/img/course-field.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">01</span>
+                        <span class="showcase__tab-name">Golf Field</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    <button class="showcase__tab" type="button" role="tab" id="tab-mountain" aria-controls="course-mountain" aria-selected="false" tabindex="-1">
+                        <img src="assets/img/course-mountain.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">02</span>
+                        <span class="showcase__tab-name">Golf Mountain</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    <button class="showcase__tab" type="button" role="tab" id="tab-canyon" aria-controls="course-canyon" aria-selected="false" tabindex="-1">
+                        <img src="assets/img/course-canyon.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">03</span>
+                        <span class="showcase__tab-name">Sunscar Canyon</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    <button class="showcase__tab" type="button" role="tab" id="tab-crystal" aria-controls="course-crystal" aria-selected="false" tabindex="-1">
+                        <img src="assets/img/course-crystal.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">04</span>
+                        <span class="showcase__tab-name">Crystal Cavern</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    <button class="showcase__tab" type="button" role="tab" id="tab-volcano" aria-controls="course-volcano" aria-selected="false" tabindex="-1">
+                        <img src="assets/img/course-volcano.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">05</span>
+                        <span class="showcase__tab-name">Golf Volcano</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    <button class="showcase__tab" type="button" role="tab" id="tab-reef" aria-controls="course-reef" aria-selected="false" tabindex="-1">
+                        <img src="assets/img/course-reef.jpg" alt="" width="1280" height="720" loading="lazy">
+                        <span class="showcase__tab-num">06</span>
+                        <span class="showcase__tab-name">Sunken Sanctuary</span>
+                        <span class="showcase__progress" aria-hidden="true"></span>
+                    </button>
+                    </div>
                 </div>
             </div>
         </section>
