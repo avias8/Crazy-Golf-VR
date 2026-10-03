@@ -26,4 +26,14 @@
     };
     applyMotion();
     reduce.addEventListener?.('change', applyMotion);
+
+    // Feature loops load and play only while on screen, and stay on their poster for reduced motion.
+    const loops = document.querySelectorAll('[data-autoplay-video]');
+    if (loops.length && 'IntersectionObserver' in window) {
+        const watcher = new IntersectionObserver((entries) => entries.forEach(({ target, isIntersecting }) => {
+            if (isIntersecting && !reduce.matches) target.play().catch(() => {});
+            else target.pause();
+        }), { threshold: 0.35 });
+        loops.forEach((loop) => watcher.observe(loop));
+    }
 })();
